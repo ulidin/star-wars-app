@@ -1,38 +1,115 @@
-.App {
+:root {
+  --highlight: hsl(223, 41%, 58%);
+  --primary: hsl(191, 83%, 41%);
+  --border-radius: 5px;
+}
+
+body {
+  background-image: url("./pic/wp7628302-light-speed-wallpapers.jpg");
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 42px;
+  background-color: transparent;
+}
+
+.title {
+  text-decoration: none;
+  font: size 1.5em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.topics {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.label {
+  border-radius: var(--border-radius);
+  padding: 3px 10px;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#title {
+  text-align: center;
+  -webkit-text-fill-color: hsl(60, 100%, 50%);
+  -webkit-text-stroke: 1px hsl(0, 0%, 0%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#title > h1 {
+  font-size: 5rem;
+  letter-spacing: 5px;
+}
+
+#title > h3 {
+  font-size: 2rem;
+  line-height: 0.1;
+  letter-spacing: 2px;
+}
+
+#search_bar {
+  padding: 5px;
+}
+
+#search_bar input {
+  width: 300px;
+  padding: 5px;
+  color: hsl(0, 0%, 0%);
+  border-radius: 5px;
+  background-color: hsl(216, 100%, 91%);
+  border: 2px solid hsla(0, 0%, 5%, 0.603);
+}
+
+#search_bar button {
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+  border: 2px solid hsla(0, 0%, 5%, 0.603);
+}
+
+@media (min-width: 3000px) {
+  .my_button {
+    width: 250px;
+    font-size: large;
+    justify-content: flex-end;
+  }
+
+  #search_bar button {
+    width: 100px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#nextButton,
+#previousButton {
+  border-radius: 5px;
+  color: black;
+  background-color: hsl(216, 100%, 91%);
+  border: 2px solid hsla(0, 0%, 5%, 0.603);
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
-.App-link {
-  color: #61dafb;
+#previousButton {
+  padding: 5px;
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nextButton {
+  padding: 5px;
+  width: 300px;
+}
+
+#accordionBody {
+  background-image: url("./pic/wp7628302-light-speed-wallpapers.jpg");
+  background-size: cover;
 }
